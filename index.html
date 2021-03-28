@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katjarando</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-header">
+        <!--Header Anfang-->
+        <div class="topbar-container">
+
+            <div class="header-line">
+                <a class="header-line" href="#">Wo möchtest du Essen bestellen?</a>
+            </div>
+
+        </div>
+        <div class="header-left">
+            <a href="#"> <img class="arrow" src="img/arrow-89-32.png"> <img class="logo" src="img/logo.png"></a>
+            <h2>Katjarando.de</h2>
+        </div>
+        <div>
+            <a href="#"><img class="menu-icon" src="img/menu-4-48.png" alt=""></a>
+        </div>
+    </div>
+    <!--header Ende-->
+
+    <div class="main-container">
+
+        <div onclick="showResponsiveBasket()" class="container-responsive-shopping-basket-button">
+
+            <div id="total-responsive" class="basket-case">
+
+            </div>
+        </div>
+
+        <!------------container left---------------->
+        <div class="container-left">
+
+
+
+            <div class="img-header">
+                <img src="img/pizza1.jpg" alt="">
+            </div>
+            <div class="restaurant-logo">
+                <div class="restaurant-logo-inner">
+                    <!--das logo selbst-->
+                    <img src="img/logo_465x320.png">
+                </div>
+            </div>
+
+
+
+            <div class="restaurant">
+
+                <div class="restaurant-upper-area">
+                    <div class="restaurant-upper-area-left">
+                        <h1>Pizza loca Heimservice</h1>
+                        <div class="restaurant-reviews">
+                            <img src="img/Rezensionen.png" alt="">
+                        </div>
+                    </div>
+                    <div class="restaurant-upper-area-right">
+
+
+                        <div class="restaurant-icons">
+                            <div class="icons">
+                                <a href="#"><img src="img/info-2-24.png" alt=""></a>
+                            </div>
+
+                            <div class="favourit icons">
+                                <a href="#"><img src="img/favorite-3-24.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurant-discription">
+                    <p>Bei diesem Restaurant kannst Du Stempel sammeln. Stelle beim Bestellabschluss bitte sicher, dass
+                        Du Dich für unseren Newsletter angemeldet hast, um Deine Stempel per E-Mail zu erhalten.
+                        Bestellungen nur aus Getränke + Dessert werden nicht geliefert.</p>
+                </div>
+
+
+
+            </div>
+            <div class="menu-bar" id="menu-bar">
+                <a onclick="openSeach()" href="#"><img src="img/search-12-32.png" alt=""></a>
+                <a href="">Beliebte Gerichte</a>
+                <a href="">Pizza</a>
+                <a href="">Pasta</a>
+                <a href="">Salat</a>
+                <a href="">Burger</a>
+                <a href="">Wraps</a>
+                <a href="">Getränke</a>
+            </div>
+            <div id="search" class="search display-none">
+                <img src="img/search-12-32.png" alt="">
+                <input id="start-search" type="text" placeholder="Artikel suchen" onkeydown="filterMeals()">
+            </div>
+
+
+            <div class="meals">
+
+                <!--Beliebte GErinchte Area-->
+                <div class="favourite-meals">
+
+                    <h3 class="meals-headline">Beliebte Gerichte</h3>
+
+                </div>
+                <div class="meals-container">
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Kaiserschmarrn', 4.9)"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Kaiserschmarrn</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Apfelmuss</p>
+                        <p class="meal-price">4,90 €</p>
+
+                    </div>
+                    <div class="one-meal-container">
+                        <svg onclick="addOrderToBasket(1, 'Pasta Carbonara', 6.5)" class="add-icon"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Pasta Carbonara</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Schinken, Ei, Sahnesauce und Parmesan</p>
+                        <p class="meal-choose-from">Wahl aus: Spagetti, Penne oder Tortelini</p>
+                        <p class="meal-price">6,50 €</p>
+
+                    </div>
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Pizza Margarita', 7.9);"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Pizza Margarita</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Mozarella</p>
+                        <p class="meal-choose-from">Wahl aus Singel, Party, Familie</p>
+                        <p class="meal-price">7,90 €</p>
+
+                    </div>
+                    <!--Salat Area-->
+                    <div class="">
+
+                        <div class="img-header"><img src="img/Salat.jpg" alt=""></div>
+                        <div class="favourite-meals">
+                            <h3 class="meals-headline">Salate</h3>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Serano Salat', 7.9);"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Serano Salat</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit grüner Salat, Thunfisch, Schafskäse</p>
+                        <p class="meal-choose-from">Wahl aus: Balsamico oder Johgurt Dressing</p>
+                        <p class="meal-price">7,90 €</p>
+
+                    </div>
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Gemischter Salat', 5.3);"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Gemischter Salat</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Tomaten, Gurken, Paprika, Zwibeln</p>
+                        <p class="meal-choose-from">Wahl aus: Balsamico oder Johgurt Dressing</p>
+                        <p class="meal-price">5,30 €</p>
+
+                    </div>
+
+                    <!--Pizza Area-->
+                    <div class="">
+                        <div class="img-header"><img src="img/pizza3.jpg" alt=""></div>
+                        <div class="favourite-meals ">
+                            <h3 class="meals-headline">Pizza</h3>
+                        </div>
+
+                    </div>
+                    <!--Hier brauche ich eine Alternative für addOrder!!!!!!!!!!!-->
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Pizza Scampi', 9.9);"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Pizza Scampi</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Parmaschinken und Knoblauch</p>
+                        <p class="meal-choose-from">Wahl aus: Singel, Jumbo, Familie</p>
+                        <p class="meal-price">9,90 €</p>
+
+                    </div>
+
+                    <div class="one-meal-container">
+                        <svg class="add-icon" onclick="addOrderToBasket(1, 'Pizza Spezial', 10.9);"
+                            xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                        <div class="headline-info-container">
+                            <h3 class="meals-headline">Pizza Spezial</h3><a href="#" class="product-info">Produkt
+                                Info</a>
+                        </div>
+                        <p class="meal-discription">mit Scampi, Meeresfrüchten und Knoblauch</p>
+                        <p class="meal-choose-from">Wahl aus: Wahl aus: Singel, Jumbo, Familie</p>
+                        <p class="meal-price">10,90 €</p>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!---------------conatiner right-->
+        <div id="container-right" class="container-right basket-container-responsive">
+            <div class="basketcase-header">
+                <h2>Warenkorb</h2>
+            </div>
+            <div class="basket-case " id="basket-case">
+
+            </div>
+
+            <div class="basket-empty" id="empty-basket">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+            </div>
+
+            <div>
+                <div class="summes">
+                    <div class="total-lines">
+                        <p>Zwischensumme</p>
+                        <p id="subtotal">0,00 €</p>
+                    </div>
+                    <div class="total-lines">
+                        <p>Lieferkosten: </p>
+                        <p>2,50 €</p>
+                    </div>
+                    <div id="" class="total-lines">
+                        <h3>Gesamt</h3>
+                        <div id="total">0,00 €</div>
+                    </div>
+                    <div id="min-order"></div>
+
+                </div>
+                <div class="order-button"> <button onclick="closeResponsiveBasket()" id="close-basket"
+                        class="order-button-active">Warenkorb
+                        schließen</button></div>
+                <div class="order-button"> <button class="order-button-inactive" id="orderButton">Bestellen</button>
+                    <button id="orderButtonActive" class="order-button-active display-none"
+                        onclick="thanksForYourOrder()">Bestellen</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="main-footer">
+        <div class="footer-links">
+            <div class="footer-links-row">
+                <a href="#">Ein Restaurant empfehlen</a>
+                <a href="#">Ein Restaurant anmelden</a>
+                <a href="#">Jobs</a>
+            </div>
+            <div class="footer-links-row">
+                <a href="#">AGB</a>
+                <a href="#">Datenschutz</a>
+                <a href="#">Impressum</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <img src="img/copyright-16.png" alt="">
+            <p> katjarando 2021</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
